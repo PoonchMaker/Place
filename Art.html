@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+* {
+    cursor: url('cursor.png'), auto !important;
+}
+a, button {
+    cursor: url('Pointer.png'), auto !important; 
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Art</title>
+</head>
+<body background="StoneWall.jpg">
+
+<h6 style="font-size: 80px; margin-left:450px; margin-top:100px; color: antiquewhite; font-family:'Times New Roman', Times, serif; z-index: 1;">
+    My Art (under construction)
+<h6> 
+
+<img src="Crane.png" width="600px" height="auto" 
+    style="position:absolute; top:310px; left:700px; z-index:-1;">
+
+<img src="Guy.gif" width="150px" height="auto" 
+    style="position:absolute; top:730px; left:640px; z-index:-1;">
+
+<audio id="bgMusic" loop>
+  <source src="45. System Settings - Nintendo DS Profile.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  document.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+</script>
+
+</body>
+</html>

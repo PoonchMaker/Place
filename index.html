@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+* {
+    cursor: url('cursor.png'), auto !important;
+}
+a, button {
+    cursor: url('Pointer.png'), auto !important; 
+}
+</style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+</head>
+<body background="Stars.jpg">
+<div style="max-width:100%; overflow-x:hidden;">
+
+<h6 style="font-size: 80px; margin-left:500px; margin-top:100px; color: antiquewhite; font-family:'Times New Roman', Times, serif; z-index: 1;">
+    Welcome to MY website
+<h6>
+
+<h6 style="font-size: 20px; margin-left:860px; margin-top:0px; color: antiquewhite; font-family:'Times New Roman', Times, serif; z-index: 1;">
+    Set zoom to 67%
+<h6>    
+
+<img src="Stuff Menu.png" width="1500px" height="auto" 
+    style="position:absolute; top:450px; left:200px; z-index:-1;">
+
+<img src="Fire.gif" width="1900px" height="auto" 
+    style="position:absolute; top:900px; left:0px; z-index:-1;">
+
+<img src="Earth.gif" width="260px" height="auto" 
+    style="position:absolute; top:30px; left:160px; z-index:-1;">
+
+<img src="Earth.gif" width="260px" height="auto" 
+    style="position:absolute; top:30px; left:1400px; z-index:-1;">
+
+<img src="Getting That Dog.jpg" width="230px" height="auto" 
+    style="position:absolute; top:900px; left:200px; z-index:-1;">
+
+<img src="kendrick.gif" width="230px" height="auto" 
+    style="position:absolute; top:900px; left:1400px; z-index:-1;">
+
+<img src="Skely.gif" width="600px" height="auto" 
+    style="position:absolute; top:1300px; left:600px; z-index:-1;">
+
+<a href="Music.html" style="position:absolute; left:230px; top:510px; z-index:1;">
+    <button style="background:none; border:none; padding:0; position:relative; z-index:1;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cHIwcnVpYW5uYXQwNTI0eHpycWJ3amM5cmJhcHd3dHE4cTAxYjhhcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JxxkWxHOEDrq0/giphy.gif" 
+             style="width:200px; height:auto; display:block; z-index:1;">
+             <h2>My Music<h2>
+    </button>
+</a>
+
+<a href="Art.html" style="position:absolute; left:530px; top:510px; z-index:1;">
+    <button style="background:none; border:none; padding:0; position:relative; z-index:1;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3MxeTZrcTl1dXBwY3prcXJvMXliejBreTcxajZ6eTJjNzEzaDF4ZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/d31vTpVi1LAcDvdm/giphy.gif" 
+             style="width:200px; height:auto; display:block; z-index:1;">
+             <h2>My Art<h2>
+    </button>
+</a>
+
+<a href="Gallery.html" style="position:absolute; left:830px; top:489px; z-index:1;">
+    <button style="background:none; border:none; padding:0; position:relative; z-index:1;">
+        <img src="camera-spin.gif"
+             style="width:200px; height:auto; display:block; z-index:1;">
+             <h2>My Gallery<h2>
+    </button>
+</a>
+
+<audio id="bgMusic" loop>
+  <source src="002 - Main Menu.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  document.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+</script>
+
+</div>
+</body>
+</html>

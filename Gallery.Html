@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+* {
+    cursor: url('cursor.png'), auto !important;
+}
+a, button {
+    cursor: url('Pointer.png'), auto !important; 
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<style>
+
+h6 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+/* Slider container */
+#photo-slider {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 40px auto;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+/* Images */
+#slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Buttons */
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+#prev:hover, #next:hover {
+  background: rgba(0,0,0,0.7);
+}
+</style>
+</head>
+<body background="Grain BG.png">
+
+<h6 style="position:absolute; font-size: 80px; margin-left:430px; margin-top:500px; color: antiquewhite; font-family:'Times New Roman', Times, serif; z-index: 1;">
+    My Gallery
+<h6>   
+
+<div id="photo-slider">
+  <button id="prev">◀</button>
+  <img id="slide" src="Gallery/Forest Bench.JPG" alt="Photo" />
+  <button id="next">▶</button>
+</div>
+
+<script>
+const photos = ["Gallery/Forest Bench.JPG", "Gallery/Fountain.JPG", "Gallery/Jeep.JPG","Gallery/Library.JPG","Gallery/Night Lights.JPG","Gallery/Park Lake.JPG","Gallery/Park Lake 2.JPG","Gallery/Passage.JPG","Gallery/Road.JPG","Gallery/Shade.JPG","Gallery/Stop Sign.JPG","Gallery/Sunny.JPG","Gallery/Town.JPG","Gallery/Tunnel.JPG","Gallery/Tunnel 2.JPG",];
+let i = 0;
+
+const img = document.getElementById("slide");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+function show(n) {
+  i = (n + photos.length) % photos.length;
+  img.src = photos[i];
+}
+
+prevBtn.addEventListener("click", () => show(i - 1));
+nextBtn.addEventListener("click", () => show(i + 1));
+</script>
+
+<audio id="bgMusic" loop>
+  <source src="23. Nintendo 3DS Camera - Slideshow (Jazz).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  document.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+</script>
+
+</body>
+</html>
